@@ -1,38 +1,299 @@
-.App {
-  text-align: center;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 263px;
+  background-color: rgba(96, 209, 208, 0.12);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.empty {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 263px;
+  height: 7vh;
+  background-color: #60D1D0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 20px;
+  gap: 20px;
+
+}
+
+.textlist {
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 130px;
+  margin-left: 80px;
+  background-color: #60D1D0;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 40px;
+  cursor: pointer;
+
+}
+
+.exit {
+  margin-left: 88px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7vh;
+  margin-left: 260px;
+
+}
+.comment{
+   margin-bottom: 5px;
+   cursor: pointer;
+   
+}
+.comment:hover{
+  width: 30px;
+  height: 30px;
+  background-color:#a7e4e3;
+  transition: 0.2s;
+  
+}
+.page {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5px;
+
+}
+
+.page-icons {
+  background-color: #60D1D0;
+  width: 263px;
+  height: 5.5vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 6px;
+
+}
+
+.canvas_1 {
+  position: fixed;
+  width: 80%;
+  height: 70vh;
+  margin-left: 265px;
+  color: black;
+  border: 2px solid black;
+  margin-top: 50px;
+}
+
+.footer {
+  position: fixed;
+  width: 80%;
+  height: 20vh;
+  margin-left: 265px;
+  margin-top: 514px;
+  display:flex;
+  gap: 30px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.modal-title {
+  color:white
+}
+.close{
+  color:red;
+  cursor: pointer;
+  
+}
+.save{
+  color:green;
+  cursor: pointer;
+}
+.box {
+  position: fixed;
+  background-color: white;
+  width: 80%;
+  height: 20vh;
+  margin-left: 265px;
+  margin-top: 514px;
+  display:flex;
+  gap: 30px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  overflow:hidden;
+
+}
+
+.color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+}
+.color::-webkit-color-swatch{
+  border-radius: 50%;
+  border: none;
+}
+.color::-moz-color-swatch{
+  border-radius: 50%;
+  border: none;
+}
+
+
+.splitdata{
+    position: absolute;
+    display: flex;
+    gap: 30px;
+    width:50px;
+    height:50px;
+    background-color:black;
+    margin-left: 500px;
+    margin-top:200px;
+    text-align: center;
+    justify-content: center;
+}
+
+.textshow{
+  position: relative;
+  cursor: pointer;
+  background-color:#60D1D0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin:auto;
+  border-radius: 100px;
+
+}
+.pinsHover{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: black;
+  color:white;
+  white-space:nowrap;
+  padding:10px 15px;
+  border-radius: 7px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+}
+.pinsHover::before{
+  content: "";
+  position:absolute;
+  left:50%;
+  top:100%;
+  transform: translateX(-50%);
+  
+  
+}
+
+.textshow:hover .pinsHover{
+      top: -400%;
+      visibility: visible;
+      cursor: pointer;
+      opacity: 1;
+      width: 100px;
+      height: 100px;
+}
+
+.foot-1{
+  width: 500px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+}
+
+.foot-5{
+  position: relative;
+  width: 400px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 30px;
+  background-color:rgb(214, 138, 214);
+  border-bottom: 3% solid rgb(194, 185, 185);
+}
+
+.foot-5:hover{
+  background-color:rgb(233, 188, 233);
+}
+.foot-2{
+  width: 600px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+.h6_text{
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  padding: 10px;
+  background-color: gray;
+  
+}
+.foot-3{
+  display: flex;
+  gap: 20px;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb{
+  -webkit-appearance: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+input[type='range']{
+  background-color: rgb(104, 102, 102);
+  width: 300px;
+  height: 20px;
+  border-top-left-radius: 100%;
+}
+input[type='range']::-webkit-slider-thumb{
+   background-color:rgb(247, 242, 242);
+   border-radius: 100px;
+   cursor: grab;
+   width: 20px;
+   height: 20px;
 }
